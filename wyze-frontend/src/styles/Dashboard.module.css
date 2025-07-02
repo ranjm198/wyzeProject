@@ -1,0 +1,100 @@
+.dashboard {
+  background-color: #0d1117;
+  color: #c9d1d9;
+  min-height: 100vh;
+  padding: 20px 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logoutBtn {
+  background-color: #238636;
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+    font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none; 
+}
+.logoutBtn:hover {
+  background-color: #2ea043;
+  text-decoration: none; 
+}
+
+.searchInput {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 25px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+  background-color: #161b22;
+  color: #161b22;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #161b22;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 15px rgb(0 0 0 / 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: box-shadow 0.3s ease;
+}
+.card:hover {
+  box-shadow: 0 8px 25px rgb(35 134 54 / 0.7);
+}
+
+.cardHeader {
+  margin-bottom: 10px;
+}
+
+.cardHeader h3 {
+  margin: 0 0 8px 0;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  background-color: #238636;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  color: #f0f6fc;
+  user-select: none;
+}
+
+.codeBlock {
+  background-color: #0d1117;
+  border-radius: 8px;
+  padding: 14px;
+  overflow-x: auto;
+  font-family: "Fira Code", monospace, monospace;
+  font-size: 0.9rem;
+  color: #9cdcfe;
+  flex-grow: 1;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}

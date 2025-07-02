@@ -1,0 +1,83 @@
+.dashboard {
+  background-color: #0d1117;
+  color: #c9d1d9;
+  min-height: 100vh;
+  padding: 20px 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.snippetForm {
+  background-color: #161b22;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgb(0 0 0 / 0.3);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.snippetForm h2 {
+  color: #c9d1d9;
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.snippetForm label {
+  display: block;
+  color: #c9d1d9;
+  font-weight: 600;
+  margin-bottom: 6px;
+  margin-top: 14px;
+  font-size: 0.9rem;
+}
+
+.snippetForm input[type="text"],
+.snippetForm textarea {
+  width: 95%;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: none;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  font-size: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  resize: vertical;
+}
+
+.snippetForm textarea {
+  min-height: 120px;
+  font-family: "Fira Code", monospace, monospace;
+  color: #9cdcfe;
+}
+
+.snippetForm button {
+  margin-top: 20px;
+  background-color: #238636;
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.snippetForm button:hover {
+  background-color: #2ea043;
+}
+
+.snippetForm .error {
+  color: #f85149;
+  margin-top: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
