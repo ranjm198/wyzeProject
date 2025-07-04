@@ -1,7 +1,6 @@
 const Snippet = require("../models/snippet.model");
 const Comment = require("../models/comment.model");
 
-// ➤ Créer un nouveau snippet
 exports.createSnippet = async (req, res) => {
   try {
     const { title, language, code } = req.body;
@@ -23,7 +22,6 @@ exports.createSnippet = async (req, res) => {
   }
 };
 
-// ➤ Obtenir tous les snippets
 exports.getAllSnippets = async (req, res) => {
   try {
     const snippets = await Snippet.find()
@@ -36,7 +34,6 @@ exports.getAllSnippets = async (req, res) => {
   }
 };
 
-// ➤ Obtenir un snippet + ses commentaires
 exports.getSnippetById = async (req, res) => {
   try {
     const snippet = await Snippet.findById(req.params.id).populate("author", "username");
@@ -46,7 +43,10 @@ exports.getSnippetById = async (req, res) => {
 
     const comments = await Comment.find({ snippet: snippet._id }).populate("author", "username");
 
-    res.json({ snippet, comments });
+    const snippetObj = snippet.toObject();
+    snippetObj.comments = comments;
+
+    res.json(snippetObj);
   } catch (error) {
     res.status(500).json({ message: "Erreur serveur", error: error.message });
   }

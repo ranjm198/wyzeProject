@@ -30,7 +30,7 @@ export default function AddSnippet() {
         { headers: { Authorization: `Bearer ${token}` } }
       );
 
-      navigate("/"); // Retour à la liste après ajout
+      navigate("/"); 
     } catch (err) {
       setError("Erreur lors de l'ajout du snippet.");
     }
